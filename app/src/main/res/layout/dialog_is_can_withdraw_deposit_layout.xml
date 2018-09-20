@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/dialog_bg">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_tip"
+        android:textSize="18sp"
+        android:textColor="@color/color_6E757F"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:id="@+id/divider"
+        android:background="@color/color_E7E9EA"
+        android:layout_below="@id/tv_tip"
+        android:layout_marginTop="30dp" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/divider">
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:id="@+id/bt_cancel"
+            android:text="取消"
+            android:textColor="@color/color_000000"
+            android:textSize="18sp"
+            android:background="@null"/>
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@color/color_E7E9EA"/>
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:id="@+id/bt_ok"
+            android:text="确定"
+            android:textColor="@color/color_3889FF"
+            android:textSize="18sp"
+            android:background="@null"/>
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="selectPicture" translatable="false">
+        <item>去支付</item>
+        <item>置顶</item>
+        <item>刷新</item>
+        <item>修改</item>
+        <item>删除</item>
+        <item>取消</item>
+    </string-array>
+
+</resources>

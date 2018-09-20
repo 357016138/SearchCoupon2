@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/vp_guide"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <ImageView
+        android:id="@+id/iv_indicator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/icon_indicator1"
+        android:layout_above="@+id/tv_go_next"
+        android:layout_marginBottom="@dimen/dp_25"/>
+
+    <TextView
+        android:id="@+id/tv_go_next"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape_btn_blue"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:text="立即体验"
+        android:textColor="@color/color_3889FF"
+        android:textSize="@dimen/sp_20"
+        android:paddingStart="@dimen/dp_50"
+        android:paddingEnd="@dimen/dp_50"
+        android:paddingTop="@dimen/dp_10"
+        android:paddingBottom="@dimen/dp_10"
+        android:layout_marginBottom="@dimen/dp_50"/>
+
+</RelativeLayout>

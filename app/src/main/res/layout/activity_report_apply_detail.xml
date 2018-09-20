@@ -1,0 +1,531 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_F6F6F6"
+    android:scrollbars="none">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@color/white">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_5"
+                android:background="@color/color_F6F6F6"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="@dimen/dp_20"
+                android:paddingEnd="@dimen/dp_20"
+                android:paddingTop="@dimen/dp_10"
+                android:paddingBottom="@dimen/dp_10"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/sp_16"
+                    android:textColor="@color/color_6E757F"
+                    android:text="借款人"
+                    android:layout_gravity="center_vertical"/>
+
+                <EditText
+                    android:id="@+id/et_loan_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/sp_16"
+                    android:textColor="@color/color_29354D"
+                    android:background="@null"
+                    android:hint="请输入借款人姓名"
+                    android:textColorHint="@color/color_D6D3D3"
+                    android:textCursorDrawable="@drawable/edittext_cursor_color"
+                    android:cursorVisible="true"
+                    android:singleLine="true"
+                    android:maxLength="18"
+                    android:inputType="text"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginEnd="3dp"/>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="20dp"
+                android:background="@color/color_E7E9EA"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="@dimen/dp_20"
+                android:paddingEnd="@dimen/dp_20"
+                android:paddingTop="@dimen/dp_10"
+                android:paddingBottom="@dimen/dp_10"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/sp_16"
+                    android:textColor="@color/color_6E757F"
+                    android:text="身份证号"
+                    android:layout_gravity="center_vertical"/>
+
+                <EditText
+                    android:id="@+id/et_idcard_num"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/sp_16"
+                    android:textColor="@color/color_29354D"
+                    android:background="@null"
+                    android:hint="请输入身份证号"
+                    android:textColorHint="@color/color_D6D3D3"
+                    android:textCursorDrawable="@drawable/edittext_cursor_color"
+                    android:cursorVisible="true"
+                    android:singleLine="true"
+                    android:maxLength="20"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginEnd="3dp"/>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="20dp"
+                android:background="@color/color_E7E9EA"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="@dimen/dp_20"
+                android:paddingEnd="@dimen/dp_20"
+                android:paddingTop="@dimen/dp_10"
+                android:paddingBottom="@dimen/dp_10"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/sp_16"
+                    android:textColor="@color/color_6E757F"
+                    android:text="手机号"
+                    android:layout_gravity="center_vertical"/>
+
+                <EditText
+                    android:id="@+id/et_phone_num"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/sp_16"
+                    android:textColor="@color/color_29354D"
+                    android:background="@null"
+                    android:hint="请输入手机号"
+                    android:textColorHint="@color/color_D6D3D3"
+                    android:inputType="number"
+                    android:maxLength="13"
+                    android:textCursorDrawable="@drawable/edittext_cursor_color"
+                    android:cursorVisible="true"
+                    android:singleLine="true"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginEnd="3dp"/>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="20dp"
+                android:background="@color/color_E7E9EA"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="@dimen/dp_20"
+                android:paddingEnd="@dimen/dp_20"
+                android:paddingTop="@dimen/dp_10"
+                android:paddingBottom="@dimen/dp_10"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/sp_16"
+                    android:textColor="@color/color_6E757F"
+                    android:text="房产证号"
+                    android:layout_gravity="center_vertical"/>
+
+                <EditText
+                    android:id="@+id/et_house_num"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/sp_16"
+                    android:textColor="@color/color_29354D"
+                    android:background="@null"
+                    android:hint="请按房产证格式输入房产证号"
+                    android:textColorHint="@color/color_D6D3D3"
+                    android:textCursorDrawable="@drawable/edittext_cursor_color"
+                    android:cursorVisible="true"
+                    android:singleLine="true"
+                    android:maxLength="20"
+                    android:inputType="text"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginEnd="3dp"/>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="20dp"
+                android:background="@color/color_E7E9EA"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/sp_16"
+                android:textColor="@color/color_6E757F"
+                android:gravity="center_vertical"
+                android:paddingStart="@dimen/dp_20"
+                android:paddingEnd="@dimen/dp_20"
+                android:paddingTop="@dimen/dp_10"
+                android:paddingBottom="@dimen/dp_10"
+                android:text="房本照片" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recyclerview_img"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:overScrollMode="never"
+                android:paddingStart="@dimen/dp_20"
+                android:paddingEnd="@dimen/dp_20"
+                android:paddingBottom="@dimen/dp_20" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_5"
+                android:background="@color/color_F6F6F6"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/sp_16"
+                android:textColor="@color/color_6E757F"
+                android:gravity="center_vertical"
+                android:paddingStart="@dimen/dp_20"
+                android:paddingEnd="@dimen/dp_20"
+                android:paddingTop="@dimen/dp_10"
+                android:paddingBottom="@dimen/dp_10"
+                android:text="返佣方式" />
+
+            <RadioGroup
+                android:id="@+id/rg_return_mode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_20"
+                android:layout_marginEnd="@dimen/dp_20"
+                android:paddingTop="@dimen/dp_10"
+                android:paddingBottom="@dimen/dp_10"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/rb_no_return"
+                    style="@style/slider_tab_style"
+                    android:checked="true"
+                    android:text="无返佣" />
+
+                <RadioButton
+                    android:id="@+id/rb_fixed_return"
+                    style="@style/slider_tab_style"
+                    android:text="固定金额返佣"
+                    android:layout_marginStart="@dimen/dp_10" />
+
+                <RadioButton
+                    android:id="@+id/rb_ratio_return"
+                    style="@style/slider_tab_style"
+                    android:text="金额比例返佣"
+                    android:layout_marginStart="@dimen/dp_10" />
+
+            </RadioGroup>
+
+            <LinearLayout
+                android:id="@+id/ll_return_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:id="@+id/ll_return_amount"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginLeft="20dp"
+                        android:background="@color/color_E7E9EA"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingStart="@dimen/dp_20"
+                        android:paddingEnd="@dimen/dp_20"
+                        android:paddingTop="@dimen/dp_10"
+                        android:paddingBottom="@dimen/dp_10"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="80dp"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/sp_16"
+                            android:textColor="@color/color_6E757F"
+                            android:text="返佣金额"
+                            android:layout_gravity="center_vertical"/>
+
+                        <EditText
+                            android:id="@+id/et_return_amount"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/sp_16"
+                            android:textColor="@color/color_29354D"
+                            android:background="@null"
+                            android:hint="请输入返佣金额"
+                            android:textColorHint="@color/color_D6D3D3"
+                            android:textCursorDrawable="@drawable/edittext_cursor_color"
+                            android:cursorVisible="true"
+                            android:singleLine="true"
+                            android:inputType="numberDecimal"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginEnd="3dp"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_return_ratio"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginLeft="20dp"
+                        android:background="@color/color_E7E9EA"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingStart="@dimen/dp_20"
+                        android:paddingEnd="@dimen/dp_20"
+                        android:paddingTop="@dimen/dp_10"
+                        android:paddingBottom="@dimen/dp_10"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="80dp"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/sp_16"
+                            android:textColor="@color/color_6E757F"
+                            android:text="返佣比例"
+                            android:layout_gravity="center_vertical"/>
+
+                        <EditText
+                            android:id="@+id/et_return_rate"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textSize="@dimen/sp_16"
+                            android:textColor="@color/color_29354D"
+                            android:background="@null"
+                            android:hint="请输入返佣比例"
+                            android:textColorHint="@color/color_D6D3D3"
+                            android:textCursorDrawable="@drawable/edittext_cursor_color"
+                            android:cursorVisible="true"
+                            android:singleLine="true"
+                            android:inputType="numberDecimal"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginEnd="3dp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/sp_16"
+                            android:textColor="@color/color_29354D"
+                            android:text="%"
+                            android:layout_gravity="center_vertical"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:background="@color/color_E7E9EA"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/sp_16"
+                    android:textColor="@color/color_6E757F"
+                    android:gravity="center_vertical"
+                    android:paddingStart="@dimen/dp_20"
+                    android:paddingEnd="@dimen/dp_20"
+                    android:paddingTop="@dimen/dp_10"
+                    android:paddingBottom="@dimen/dp_10"
+                    android:text="结算方式" />
+
+                <RadioGroup
+                    android:id="@+id/rg_settlement_type"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp_20"
+                    android:layout_marginEnd="@dimen/dp_20"
+                    android:paddingTop="@dimen/dp_10"
+                    android:paddingBottom="@dimen/dp_10"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/rb_settlement_one"
+                        style="@style/slider_tab_style"
+                        android:checked="true"
+                        android:text="一次性返佣" />
+
+                    <RadioButton
+                        android:id="@+id/rb_settlement_month"
+                        style="@style/slider_tab_style"
+                        android:text="按月返佣"
+                        android:layout_marginStart="@dimen/dp_10"
+                        android:visibility="gone"/>
+
+                </RadioGroup>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:background="@color/color_E7E9EA"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/sp_16"
+                    android:textColor="@color/color_6E757F"
+                    android:gravity="center_vertical"
+                    android:paddingStart="@dimen/dp_20"
+                    android:paddingEnd="@dimen/dp_20"
+                    android:paddingTop="@dimen/dp_10"
+                    android:paddingBottom="@dimen/dp_10"
+                    android:text="收佣方式" />
+
+                <RadioGroup
+                    android:id="@+id/rg_collect_type"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp_20"
+                    android:layout_marginEnd="@dimen/dp_20"
+                    android:paddingTop="@dimen/dp_10"
+                    android:paddingBottom="@dimen/dp_10"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/rb_before_collect"
+                        style="@style/slider_tab_style"
+                        android:checked="true"
+                        android:text="先收款" />
+
+                    <RadioButton
+                        android:id="@+id/rb_after_collect"
+                        style="@style/slider_tab_style"
+                        android:text="后收款(高风险)"
+                        android:layout_marginStart="@dimen/dp_10" />
+
+                </RadioGroup>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/color_E7E9EA" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="@dimen/dp_20"
+            android:paddingEnd="@dimen/dp_20"
+            android:layout_marginTop="@dimen/dp_5"
+            android:text="请上传单套房本照片，最多可上传3张。"
+            android:drawableStart="@drawable/icon_dot"
+            android:drawablePadding="@dimen/dp_5"
+            android:textColor="@color/color_C0C0C0"
+            android:textSize="@dimen/sp_14" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="@dimen/dp_20"
+            android:paddingEnd="@dimen/dp_20"
+            android:text="照片能清晰显示房屋坐落位置、建筑面积。"
+            android:drawableStart="@drawable/icon_dot"
+            android:drawablePadding="@dimen/dp_5"
+            android:textColor="@color/color_C0C0C0"
+            android:textSize="@dimen/sp_14" />
+
+        <LinearLayout
+            android:id="@+id/ll_btn"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:background="@drawable/bg_loan_pic_shadow"
+            android:layout_marginBottom="@dimen/dp_50"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:layout_marginRight="@dimen/dp_10"
+            android:layout_marginTop="@dimen/dp_50"
+            android:gravity="center_horizontal"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingBottom="20dp">
+
+            <TextView
+                android:id="@+id/btn_submit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_loan"
+                android:gravity="center"
+                android:paddingBottom="@dimen/dp_10"
+                android:paddingTop="@dimen/dp_10"
+                android:text="提交"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:clickable="true"
+                android:focusable="true"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

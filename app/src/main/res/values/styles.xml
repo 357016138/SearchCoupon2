@@ -1,0 +1,168 @@
+<resources>
+
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!--<item name="android:textAllCaps">false</item>-->
+        <!--<item name="android:windowActionBar">false</item>-->
+        <!--<item name="windowActionBar">false</item>-->
+        <!--&lt;!&ndash;<item name="android:windowAnimationStyle">@style/AnimationActivity</item>&ndash;&gt;-->
+        <!--<item name="windowNoTitle">true</item>-->
+        <!--<item name="android:windowIsTranslucent">true</item>-->
+        <!--<item name="android:windowBackground">@android:color/transparent</item>-->
+        <!--<item name="colorAccent">@android:color/holo_blue_dark</item>-->
+        <!--</style>-->
+
+        <item name="colorPrimary">@color/color_0c9bff</item>
+        <item name="colorPrimaryDark">@color/color_0c9bff</item>
+        <item name="colorAccent">@color/color_0c9bff</item>
+        <item name="android:windowAnimationStyle">@style/activityAnimation</item>
+    </style>
+
+    <!-- activity动画样式 -->
+    <style name="activityAnimation" parent="@android:style/Animation">
+        <item name="android:activityOpenEnterAnimation">@anim/slide_right_in</item>
+        <item name="android:activityOpenExitAnimation">@anim/static_anim</item>
+        <item name="android:activityCloseEnterAnimation">@anim/static_anim</item>
+        <item name="android:activityCloseExitAnimation">@anim/slide_right_out</item>
+    </style>
+    <!--全屏的样式 不显示状态栏 个别页面可用-->
+    <style name="FullScreenTheme" parent="AppTheme">
+        <!-- Customize your theme here. -->
+        <item name="android:windowFullscreen">true</item>
+    </style>
+
+    <!--等待loading对话框-->
+    <style name="style_common_dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:textSize">25sp</item>
+    </style>
+
+    <!--间隔线-->
+    <style name="line_style">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">0.5dp</item>
+        <item name="android:background">@color/color_E8E7E9</item>
+    </style>
+
+    <!--通用btn style-->
+    <style name="common_btn_style">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">45dp</item>
+        <item name="android:layout_marginLeft">30dp</item>
+        <item name="android:layout_marginRight">30dp</item>
+        <item name="android:background">@drawable/bg_login_button</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/text_size_mid</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <!--我的按钮style-->
+    <style name="mine_btn_style">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">60dp</item>
+        <item name="android:paddingLeft">20dp</item>
+        <item name="android:paddingRight">20dp</item>
+        <item name="android:background">@drawable/bg_common_wihte</item>
+        <item name="android:drawablePadding">7dp</item>
+        <item name="android:gravity">center_vertical|left</item>
+        <item name="android:textColor">@color/color_333333</item>
+        <item name="android:textSize">@dimen/text_size_normal_x</item>
+        <item name="android:drawableRight">@drawable/icon_arrow_next</item>
+    </style>
+
+    <!--  主界面tab中RadioButton字体样式-->
+    <style name="slider_tab_style">
+        <item name="android:textSize">@dimen/sp_14</item>
+        <item name="android:textColor">@drawable/slider_tab_tvcolor</item>
+        <item name="android:background">@drawable/slider_tab_bgcolor</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingTop">@dimen/dp_5</item>
+        <item name="android:paddingBottom">@dimen/dp_5</item>
+        <item name="android:paddingLeft">@dimen/dp_10</item>
+        <item name="android:paddingRight">@dimen/dp_10</item>
+        <item name="android:button">@null</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+    <!--极光推送style-->
+    <style name="MyDialogStyle">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item>
+        <item name="android:backgroundDimEnabled">true</item>
+    </style>
+
+    <style name="bottom_dialog_window_style" parent="android:Animation">
+        <item name="android:windowEnterAnimation">@anim/dialog_enter</item>
+        <item name="android:windowExitAnimation">@anim/dialog_exit</item>
+    </style>
+
+    <style name="bottom_dialog">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:background">@color/white</item>
+    </style>
+
+    <declare-styleable name="PasswordKeyboard">
+        <attr name="contentColor" format="color" />
+        <attr name="dividerColor" format="color" />
+        <attr name="dividerWidth" format="color" />
+        <attr name="circleDotSize" format="dimension" />
+    </declare-styleable>
+
+    <declare-styleable name="PasswordEditText">
+        <!-- 密码的个数 -->
+        <attr name="passwordNumber" format="integer" />
+        <!-- 密码圆点的半径 -->
+        <attr name="passwordRadius" format="dimension" />
+        <!-- 密码圆点的颜色 -->
+        <attr name="passwordColor" format="color" />
+        <!-- 分割线的颜色 -->
+        <attr name="divisionLineColor" format="color" />
+        <!-- 分割线的大小 -->
+        <attr name="divisionLineSize" format="dimension" />
+        <!-- 背景边框的颜色 -->
+        <attr name="bgColor" format="color" />
+        <!-- 背景边框的大小 -->
+        <attr name="bgSize" format="dimension" />
+        <!-- 背景边框的圆角大小 -->
+        <attr name="bgCorner" format="dimension" />
+    </declare-styleable>
+
+    <style name="input_password_dialog" parent="android:style/Theme.Dialog">
+        <item name="android:background">#00000000</item> <!-- 设置自定义布局的背景透明 -->
+        <item name="android:windowBackground">@android:color/transparent
+        </item>  <!-- 设置window背景透明，也就是去边框 -->
+        <item name="android:backgroundDimEnabled">true</item>
+    </style>
+
+    <style name="keyboard_button">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@color/color_000000</item>
+        <item name="android:background">@color/white</item>
+    </style>
+
+    <style name="dialog_no_bg">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+</resources>

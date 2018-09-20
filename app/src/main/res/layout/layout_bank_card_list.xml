@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_F6F8F9"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/ll_bank_card_empty"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="88dp"
+                android:layout_marginRight="88dp"
+                android:layout_marginTop="45dp"
+                android:adjustViewBounds="true"
+                android:scaleType="center"
+                android:src="@drawable/ic_bank_card_empty" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal|bottom"
+                android:layout_marginBottom="5dp"
+                android:text="暂无银行卡"
+                android:textColor="@color/color_C0C0C0"
+                android:textSize="20sp" />
+
+        </FrameLayout>
+
+        <Button
+            android:id="@+id/bt_add_bank_card"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginLeft="95dp"
+            android:layout_marginRight="95dp"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/bg_bank_card_empty_add"
+            android:text="＋ 添加银行卡"
+            android:textColor="@color/color_3889FF"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_bank_card_net_error"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="88dp"
+                android:layout_marginRight="88dp"
+                android:layout_marginTop="45dp"
+                android:adjustViewBounds="true"
+                android:scaleType="center"
+                android:src="@drawable/ic_network_error" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal|bottom"
+                android:layout_marginBottom="5dp"
+                android:text="呀，网络出了问题"
+                android:textColor="@color/color_C0C0C0"
+                android:textSize="20sp" />
+
+        </FrameLayout>
+
+        <Button
+            android:id="@+id/bt_bank_card_refresh"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginLeft="95dp"
+            android:layout_marginRight="95dp"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/bg_bank_card_empty_add"
+            android:text="点击刷新"
+            android:textColor="@color/color_3889FF"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/bank_card_list_refresh_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:srlEnableAutoLoadmore="true"
+        app:srlEnableOverScrollBounce="false">
+
+        <com.scwang.smartrefresh.layout.header.ClassicsHeader
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_bank_card_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp" />
+
+        <com.scwang.smartrefresh.layout.footer.ClassicsFooter
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+</LinearLayout>

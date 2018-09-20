@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/color_F6F6F6"
+    android:paddingBottom="14dp">
+
+    <LinearLayout
+        android:id="@+id/llItem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/color_F6F6F6"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp">
+
+        <View
+            android:id="@+id/vBlank"
+            android:layout_width="match_parent"
+            android:layout_height="14dp"
+            android:background="@android:color/transparent"
+            android:visibility="gone"/>
+
+        <RelativeLayout
+            android:id="@+id/rlCard"
+            android:layout_width="match_parent"
+            android:layout_height="105dp">
+
+            <ImageView
+                android:id="@+id/ivBankIcon"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginTop="18dp"
+                android:layout_marginLeft="24dp"/>
+
+            <TextView
+                android:id="@+id/tvBankName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/ivBankIcon"
+                android:layout_toRightOf="@+id/ivBankIcon"
+                android:layout_marginLeft="6dp"
+                android:textSize="@dimen/text_size_normal"
+                android:textColor="@color/white"/>
+
+            <TextView
+                android:id="@+id/tvDefault"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/tvBankName"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="24dp"
+                android:textSize="@dimen/text_size_small_x"
+                android:textColor="@color/white"/>
+
+            <TextView
+                android:id="@+id/tvCardType"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/tvBankName"
+                android:layout_below="@+id/tvBankName"
+                android:layout_marginTop="4dp"
+                android:textSize="@dimen/text_size_small"
+                android:textColor="@color/white"/>
+
+            <TextView
+                android:id="@+id/tvCardNo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/tvBankName"
+                android:layout_below="@+id/tvCardType"
+                android:layout_marginTop="7dp"
+                android:textSize="@dimen/text_size_big"
+                android:textColor="@color/white"/>
+        </RelativeLayout>
+
+        <RadioButton
+            android:id="@+id/rbDefault"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:button="@drawable/selector_btn_check"
+            android:paddingLeft="6dp"
+            android:visibility="gone"
+            android:layout_marginBottom="8dp"
+            android:text="默认卡片"
+            android:textColor="@color/color_666666"
+            android:textSize="@dimen/text_size_small_x"/>
+    </LinearLayout>
+</FrameLayout>

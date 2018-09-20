@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_loading_dialog"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="13dp"
+        android:text="发现新版本"
+        android:textColor="@color/color_4A4A4A"
+        android:textSize="@dimen/text_size_mid_x" />
+
+    <View
+        android:id="@+id/v_1"
+        style="@style/line_style" />
+
+    <TextView
+        android:id="@+id/tv_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:gravity="left|center_vertical"
+        android:padding="15dp"
+        android:text="内容"
+        android:textColor="@color/color_4A4A4A"
+        android:textSize="@dimen/text_size_normal_x" />
+
+    <View
+        android:id="@+id/v_2"
+        style="@style/line_style" />
+
+    <LinearLayout
+        android:id="@+id/lt_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_cancel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:padding="13dp"
+            android:text="取消"
+            android:textColor="@color/color_4A4A4A"
+            android:textSize="16sp" />
+
+        <View
+            android:layout_width="0.5dp"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp"
+            android:background="@color/color_E8E7E9" />
+
+        <TextView
+            android:id="@+id/tv_ok"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:padding="13dp"
+            android:text="更新"
+            android:textColor="@color/color_0F90F9"
+            android:textSize="16sp" />
+    </LinearLayout>
+</LinearLayout>

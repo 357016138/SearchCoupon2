@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="bottom"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/windowPopu_bank"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp">
+
+            <TextView
+                android:id="@+id/windowPopu_cancel"
+                android:layout_width="60dp"
+                android:layout_height="40dp"
+                android:layout_alignParentLeft="true"
+                android:focusable="true"
+                android:gravity="center"
+                android:text="取消"
+                android:textColor="@color/color_666666"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/windowPopu_clear"
+                android:layout_width="60dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@id/windowPopu_cancel"
+                android:focusable="true"
+                android:gravity="center"
+                android:text="清空"
+                android:textColor="@color/color_666666"
+                android:textSize="14sp"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/windowPoupu_sure"
+                android:layout_width="60dp"
+                android:layout_height="40dp"
+                android:layout_alignParentRight="true"
+                android:focusable="true"
+                android:gravity="center"
+                android:text="确定"
+                android:textColor="@color/color_0F90F9"
+                android:textSize="14sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@id/windowPoupu_sure"
+                android:background="@color/color_E1E1E1" />
+        </RelativeLayout>
+
+
+        <com.search.coupon.agent.view.NumberPickerView
+            android:id="@+id/windowPopu_dataChoose"
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            app:npv_DividerColor="@color/color_999999"
+            app:npv_TextColorNormal="@color/color_999999"
+            app:npv_TextColorSelected="@color/color_51BBFF" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/windowPopu_address"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="7" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:paddingBottom="10dp">
+
+            <RelativeLayout
+                android:id="@+id/windowPopu_topBar_city"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp">
+
+                <TextView
+                    android:layout_width="60dp"
+                    android:layout_height="40dp"
+                    android:layout_centerHorizontal="true"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:text="选择地区"
+                    android:textColor="@color/color_666666"
+                    android:textSize="14sp" />
+
+                <ImageView
+                    android:id="@+id/windowPopu_close"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:padding="5dp"
+                    android:src="@drawable/ic_close_address" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingLeft="24dp">
+
+                <TextView
+                    android:id="@+id/windowPopu_provence"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/color_51BBFF"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/windowPopu_city"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:textColor="@color/color_51BBFF"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/windowPopu_area"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:textColor="@color/color_51BBFF"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/color_E1E1E1" />
+
+            <LinearLayout
+                android:id="@+id/windowPopu_locationLay"
+                android:layout_width="match_parent"
+                android:layout_height="34dp"
+                android:layout_marginTop="13dp"
+                android:background="@color/color_EDEDED"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="24dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/icon_location" />
+
+                <TextView
+                    android:id="@+id/windowPopu_location"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="6dp"
+                    android:text="当前定位城市"
+                    android:textColor="@color/color_666666"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+
+            <ListView
+                android:id="@+id/windowPopu_addressChoose"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

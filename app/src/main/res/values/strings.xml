@@ -1,0 +1,88 @@
+<resources>
+    <string name="app_name">微信搜索</string>
+    <string name="text_net_error">网络出错，请检查网络设置</string>
+
+    <string name="title_home">首页</string>
+    <string name="title_order">订单</string>
+    <string name="title_tool">发布</string>
+    <string name="title_user">我的</string>
+    <string name="bottom_title">已有%s人累计贷款%s元</string>
+
+    <string name="btn_consult_price">我要询价</string>
+    <string name="btn_max_loan">最高可贷(元)</string>
+    <string name="btn_loan_strategy">贷款攻略</string>
+    <string name="btn_commission_trial">佣金试算</string>
+    <string name="text_cust_amount">共有客户经理/人</string>
+    <string name="text_make_commission">累计赚取佣金/元</string>
+    <string name="text_loan_amount">已有--人累计贷款--元</string>
+
+    <string name="setting">设置</string>
+    <string name="cancel">取消</string>
+    <string name="ask_again">请给予应用必要权限，让程序可正常工作</string>
+    <string name="perm_tip">当前应用缺少必要权限。\n请点击"设置"-"权限"-打开所需权限。\n最后点击两次后退按钮，即可返回</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="main_home_fragment">首页</string>
+    <!-- Accessibility description sent when user starts drawing a lock pattern. [CHAR LIMIT=NONE] -->
+    <string name="lockscreen_access_pattern_start">Pattern started</string>
+    <!-- Accessibility description sent when the pattern times out and is cleared. [CHAR LIMIT=NONE] -->
+    <string name="lockscreen_access_pattern_cleared">Pattern cleared</string>
+    <!-- Accessibility description sent when user adds a cell to the pattern. [CHAR LIMIT=NONE] -->
+    <string name="lockscreen_access_pattern_cell_added">Cell added</string>
+    <!-- Accessibility description sent when user completes drawing a pattern. [CHAR LIMIT=NONE] -->
+    <string name="lockscreen_access_pattern_detected">Pattern completed</string>
+    <string name="bill_top_1">询价订单</string>
+    <string name="bill_top_2">贷款订单</string>
+
+    <!--工具界面start-->
+    <string name="use_title">发布</string>
+    <string name="use_1">发布微信群</string>
+    <string name="use_2">发布公众号</string>
+    <!--工具界面end-->
+
+    <!--我的界面start-->
+    <string name="mine_4">资金管理</string>
+    <string name="mine_5">返佣管理</string>
+    <string name="mine_6">账单</string>
+    <string name="mine_7">银行卡</string>
+    <string name="mine_8">邀请好友</string>
+    <string name="mine_9">业绩榜单</string>
+    <string name="mine_10">客户经理</string>
+    <string name="mine_11">帮助中心</string>
+    <string name="mine_12">关于我们</string>
+    <string name="mine_13">联系我们</string>
+    <string name="mine_14">我要吐槽</string>
+    <!--我的界面end-->
+
+    <!--我的资产界面start-->
+    <string name="capital_1">我的资产</string>
+    <string name="capital_2">资产总额(元)</string>
+    <string name="capital_3">账户余额</string>
+    <string name="capital_4">累计收益</string>
+    <string name="capital_5">待收收益</string>
+    <string name="capital_6">提现冻结</string>
+    <string name="capital_7">提现总额</string>
+    <!--我的资产界面end-->
+
+    <!--询价订单详情start-->
+    <string name="price_bill_detail_status">当前状态</string>
+    <string name="price_bill_detail_bill_info">订单信息</string>
+    <!--询价订单详情end-->
+
+
+    <!--充值界面start-->
+    <string name="recharge_title">发布</string>
+    <string name="recharge_1">10</string>
+    <string name="recharge_2">30</string>
+    <string name="recharge_3">50</string>
+    <string name="recharge_4">80</string>
+    <string name="recharge_5">100</string>
+    <string name="recharge_6">150</string>
+    <string name="recharge_7">200</string>
+    <string name="recharge_8">300</string>
+    <string name="title_activity_crop_pic">CropPicActivity</string>
+    <!--充值界面end-->
+
+
+</resources>

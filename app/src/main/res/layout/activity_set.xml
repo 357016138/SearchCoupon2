@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <View style="@style/line_style" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="83dp"
+                android:background="@color/white">
+
+                <TextView
+                    android:id="@+id/btn_gestureTV"
+                    style="@style/mine_btn_style"
+                    android:drawablePadding="15dp"
+                    android:drawableRight="@null"
+                    android:text="手势密码: 开启"
+                    android:textColor="@color/color_6E757F" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="45dp"
+                    android:drawableRight="@null"
+                    android:text="进入应用时是否需要手势密码验证"
+                    android:textColor="@color/color_999999"
+                    android:textSize="@dimen/sp_14" />
+
+                <com.search.coupon.agent.view.SwitchButton
+                    android:id="@+id/btn_gesture"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:paddingRight="24dp"
+                    android:paddingTop="6dp"
+                    app:kswBackDrawable="@drawable/ios_back_drawable"
+                    app:kswThumbDrawable="@drawable/ios_thumb_selector"
+                    app:kswThumbMarginBottom="-8dp"
+                    app:kswThumbMarginLeft="-5dp"
+                    app:kswThumbMarginRight="-5dp"
+                    app:kswThumbMarginTop="-2.5dp"
+                    app:kswThumbRangeRatio="1.4" />
+            </RelativeLayout>
+
+
+            <TextView
+                android:id="@+id/tv_reset_gesture"
+                style="@style/mine_btn_style"
+                android:layout_marginTop="6dp"
+                android:drawablePadding="15dp"
+                android:text="修改手势密码"
+                android:textColor="@color/color_6E757F" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginLeft="21dp"
+                android:background="@color/color_E7E9EA" />
+
+            <TextView
+                android:id="@+id/tv_reset_login"
+                style="@style/mine_btn_style"
+                android:drawablePadding="15dp"
+                android:text="修改登录密码"
+                android:textColor="@color/color_6E757F" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginLeft="21dp"
+                android:background="@color/color_E7E9EA" />
+
+            <TextView
+                android:id="@+id/tv_revise_withdraw"
+                style="@style/mine_btn_style"
+                android:drawablePadding="15dp"
+                android:text="修改提现密码"
+                android:textColor="@color/color_6E757F"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/tv_reset_withdraw"
+                style="@style/mine_btn_style"
+                android:drawablePadding="15dp"
+                android:text="设置提现密码"
+                android:textColor="@color/color_6E757F"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/tv_version"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:layout_marginTop="@dimen/dp_15"
+                android:textSize="@dimen/sp_12"
+                android:textColor="@color/color_BBA8A8A8" />
+
+
+        </LinearLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/btn_sign_out"
+        android:layout_width="match_parent"
+        android:layout_height="58dp"
+        android:background="@color/white"
+        android:text="退出"
+        android:textColor="@color/color_FF924C"
+        android:textSize="@dimen/sp_20" />
+</LinearLayout>

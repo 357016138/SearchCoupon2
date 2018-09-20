@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:id="@+id/rl_search"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="@color/white">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentLeft="true"
+            android:padding="@dimen/dp_5"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="15dp"
+            android:src="@drawable/ic_back"/>
+
+        <EditText
+            android:id="@+id/et_search"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            android:hint="搜索"
+            android:textColor="@color/color_666666"
+            android:textColorHint="@color/color_D6D3D3"
+            android:textCursorDrawable="@drawable/edittext_cursor_color"
+            android:cursorVisible="true"
+            android:maxLength="15"
+            android:singleLine="true"
+            android:ellipsize="start"
+            android:imeOptions="actionSearch"
+            android:background="@drawable/btn_mid_disable"/>
+
+        <ImageView
+            android:id="@+id/iv_search"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:padding="@dimen/dp_5"
+            android:layout_marginTop="30dp"
+            android:layout_marginRight="15dp"
+            android:src="@drawable/ic_search"/>
+
+    </RelativeLayout>
+
+
+
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/no_data_refreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:srlEnableAutoLoadmore="true"
+        app:srlEnableOverScrollBounce="false"
+        android:visibility="gone">
+
+        <com.scwang.smartrefresh.layout.header.ClassicsHeader
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:background="@color/white"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="15dp"
+                android:src="@drawable/ic_bill_no_data" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="20dp"
+                android:paddingTop="20dp"
+                android:text="没有匹配的结果\n可更换关键词搜索"
+                android:textColor="@color/color_38415C"
+                android:gravity="center_horizontal"
+                android:textSize="@dimen/text_size_big" />
+
+        <!--    <Button
+                android:id="@+id/btn_apply"
+                android:layout_width="156dp"
+                android:layout_height="40dp"
+                android:background="@drawable/bg_repay"
+                android:text="去发布"
+                android:textColor="@color/color_0C9BFF"
+                android:textSize="@dimen/text_size_big" />-->
+        </LinearLayout>
+        <com.scwang.smartrefresh.layout.footer.ClassicsFooter
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/fragmentBill_refreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:srlEnableAutoLoadmore="true"
+        app:srlEnableOverScrollBounce="false">
+
+        <com.scwang.smartrefresh.layout.header.ClassicsHeader
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/fragmentBill_recyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:overScrollMode="never"/>
+
+        <com.scwang.smartrefresh.layout.footer.ClassicsFooter
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp" />
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+
+
+</LinearLayout>

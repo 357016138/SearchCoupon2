@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <EditText
+        android:id="@+id/et_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:textColor="@color/color_29354D"
+        android:hint="欢迎反馈...."
+        android:textColorHint="@color/color_D6D3D3"
+        android:textCursorDrawable="@drawable/edittext_cursor_color"
+        android:cursorVisible="true"
+        android:padding="@dimen/dp_12"
+        android:textSize="@dimen/sp_18"
+        android:maxLength="200"
+        android:gravity="top|left"/>
+
+
+
+
+</LinearLayout>

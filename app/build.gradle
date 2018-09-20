@@ -1,0 +1,98 @@
+apply plugin: 'com.android.application'
+
+android {
+    signingConfigs {
+        config {
+            keyAlias 'houseloan_agent'
+            keyPassword 'jieyue2018'
+            storeFile file('../houseloan.jks')
+            storePassword 'jieyue2018'
+        }
+    }
+    compileSdkVersion 27
+    buildToolsVersion "27.0.2"
+    defaultConfig {
+        applicationId "com.search.coupon.agent"
+        minSdkVersion 17
+        targetSdkVersion 27
+        versionCode 100
+        versionName "1.0.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        multiDexEnabled true //Howard 2017-08-31 解决方法数超过65536的问题
+
+    }
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            signingConfig signingConfigs.config
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+
+        debug {
+            minifyEnabled false
+            signingConfig signingConfigs.config
+        }
+    }
+    compileOptions {
+        targetCompatibility JavaVersion.VERSION_1_8
+        sourceCompatibility JavaVersion.VERSION_1_8
+    }
+
+    repositories {
+        flatDir {
+            dirs 'libs'
+        }
+    }
+
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'com.android.support:appcompat-v7:27.0.2'
+    implementation 'com.android.support.constraint:constraint-layout:1.0.2'
+    implementation 'com.android.support:support-v4:27.0.2'
+    implementation 'com.android.support:design:27.1.1'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.1'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
+    //compile 'com.umeng.analytics:analytics:6.1.2'
+    compile 'com.umeng.analytics:analytics:latest.integration'
+    compile 'com.android.support:recyclerview-v7:27.0.2'
+    //recyclerview
+    //compile 'com.tbruyelle.rxpermissions2:rxpermissions:0.9.5@aar'
+    compile 'com.tbruyelle.rxpermissions:rxpermissions:0.7.0@aar'
+    //rxpermissions
+    compile 'com.squareup.okhttp3:okhttp:3.9.0'
+    //OKhttp √
+    compile 'com.scwang.smartrefresh:SmartRefreshLayout:1.0.3'
+    //下拉刷新控件 √
+    compile 'com.github.donkingliang:ImageSelector:1.5.0'
+    compile 'io.reactivex.rxjava2:rxandroid:2.0.1'
+    compile 'io.reactivex.rxjava2:rxjava:2.1.8'
+    compile 'org.greenrobot:eventbus:3.1.1'
+    compile 'com.github.bumptech.glide:glide:4.5.0'
+    //Glide 图片加载√
+    compile 'com.google.code.gson:gson:2.8.2'
+    //Gson解析 √
+    compile 'com.jakewharton:butterknife:8.8.1'
+    //butterknife注解 √
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
+    //第三方支付
+    compile(name: 'paysdk-release-1.2.1', ext: 'aar')//paysdk-release-1.2.1(sdk名称)
+    compile 'com.youth.banner:banner:1.4.10'
+    //解决TextView会自动换行的bug
+    compile 'me.biubiubiu.justifytext:library:1.1'
+    //图片选择
+    compile 'com.oginotihiro:cropview:1.0.0'
+    //注解 √
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
+
+}
+
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'

@@ -1,0 +1,410 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/ll_regist"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/signup_belowFContainerLay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/signup_belowFLay"
+                android:layout_width="match_parent"
+                android:layout_height="58dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="30dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+
+                <EditText
+                    android:id="@+id/signup_uerName"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/color_00000000"
+                    android:hint="请输入手机号"
+                    android:textCursorDrawable="@drawable/edittext_cursor_color"
+                    android:textColorHint="@color/color_C5C5C5"
+                    android:inputType="number"
+                    android:maxLength="13"
+                    android:textSize="@dimen/text_size_big" />
+
+                <ImageView
+                    android:id="@+id/iv_del_username"
+                    android:layout_width="34dp"
+                    android:layout_height="34dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginBottom="14dp"
+                    android:padding="@dimen/dp_5"
+                    android:src="@drawable/icon_login_close"
+                    android:visibility="gone"/>
+
+            </RelativeLayout>
+
+            <View
+                android:id="@+id/signup_belowFL"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@id/signup_belowFLay"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:background="@color/color_F6F8F9" />
+
+            <RelativeLayout
+                android:id="@+id/rl_pic_code"
+                android:layout_width="match_parent"
+                android:layout_height="58dp"
+                android:layout_below="@id/signup_belowFL"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/iv_pic_code"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"/>
+
+                <EditText
+                    android:id="@+id/et_pic_code"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/color_00000000"
+                    android:hint="请输入图中文字"
+                    android:textCursorDrawable="@drawable/edittext_cursor_color"
+                    android:textColorHint="@color/color_C5C5C5"
+                    android:layout_toLeftOf="@id/iv_pic_code"
+                    android:layout_marginRight="10dp"
+                    android:inputType="text"
+                    android:maxLength="4"
+                    android:textSize="@dimen/text_size_big" />
+
+
+
+            </RelativeLayout>
+
+            <View
+                android:id="@+id/v_pic_code"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@id/rl_pic_code"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:background="@color/color_F6F8F9" />
+
+            <RelativeLayout
+                android:id="@+id/signup_belowForLay"
+                android:layout_width="match_parent"
+                android:layout_height="58dp"
+                android:layout_below="@id/v_pic_code"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp">
+
+                <TextView
+                    android:id="@+id/signup_obtainCode"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:text="获取验证码"
+                    android:textSize="@dimen/sp_16"
+                    android:textColor="@color/color_A2A2A2" />
+
+                <ImageView
+                    android:id="@+id/iv_del_obtainCode"
+                    android:layout_width="34dp"
+                    android:layout_height="34dp"
+                    android:layout_toLeftOf="@id/signup_obtainCode"
+                    android:layout_centerVertical="true"
+                    android:padding="@dimen/dp_5"
+                    android:src="@drawable/icon_login_close"
+                    android:visibility="gone"/>
+
+                <EditText
+                    android:id="@+id/signup_code_input"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@id/iv_del_obtainCode"
+                    android:background="@color/color_00000000"
+                    android:textCursorDrawable="@drawable/edittext_cursor_color"
+                    android:inputType="number"
+                    android:textColorHint="@color/color_C5C5C5"
+                    android:maxLength="6"
+                    android:hint="请输入验证码"
+                    android:textSize="@dimen/text_size_big" />
+
+            </RelativeLayout>
+
+            <View
+                android:id="@+id/signup_belowTL"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@id/signup_belowForLay"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:background="@color/color_F6F8F9" />
+
+            <RelativeLayout
+                android:id="@+id/signup_belowSLay"
+                android:layout_width="match_parent"
+                android:layout_height="58dp"
+                android:layout_below="@id/signup_belowTL"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp">
+
+                <CheckBox
+                    android:id="@+id/signup_showPassWord"
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:button="@drawable/selecter_password" />
+
+                <ImageView
+                    android:id="@+id/iv_del_PassWord"
+                    android:layout_width="34dp"
+                    android:layout_height="34dp"
+                    android:layout_toLeftOf="@id/signup_showPassWord"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:padding="@dimen/dp_5"
+                    android:src="@drawable/icon_login_close"
+                    android:visibility="gone"/>
+
+                <EditText
+                    android:id="@+id/signup_password_input"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@id/iv_del_PassWord"
+                    android:background="@color/color_00000000"
+                    android:hint="请输入6-12位字母+数字密码"
+                    android:textColorHint="@color/color_C5C5C5"
+                    android:textCursorDrawable="@drawable/edittext_cursor_color"
+                    android:inputType="textPassword"
+                    android:maxLength="12"
+                    android:textSize="@dimen/text_size_big" />
+
+            </RelativeLayout>
+
+            <View
+                android:id="@+id/signup_belowSL"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@id/signup_belowSLay"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:background="@color/color_F6F8F9" />
+
+
+            <RelativeLayout
+                android:id="@+id/rl_choses_city"
+                android:layout_width="match_parent"
+                android:layout_height="58dp"
+                android:layout_below="@id/signup_belowSL"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:visibility="gone">
+
+
+                <ImageView
+                    android:id="@+id/iv_choses_city"
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/icon_choses_city" />
+
+                <TextView
+                    android:id="@+id/signup_city_input"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@id/iv_choses_city"
+                    android:background="@color/color_00000000"
+                    android:textColor="@color/color_3F3F3F"
+                    android:textColorHint="@color/color_C5C5C5"
+                    android:gravity="center_vertical"
+                    android:hint="请选择所在城市"
+                    android:maxLength="20"
+                    android:textSize="@dimen/text_size_big" />
+
+            </RelativeLayout>
+
+            <View
+                android:id="@+id/signup_belowCity"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@id/rl_choses_city"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:background="@color/color_F6F8F9" />
+
+            <RelativeLayout
+                android:id="@+id/rl_inviter_input"
+                android:layout_width="match_parent"
+                android:layout_height="58dp"
+                android:layout_below="@id/signup_belowSL"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp">
+
+
+                <TextView
+                    android:id="@+id/tv_inviter_input"
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:layout_alignBaseline="@+id/signup_inviter_input"
+                    android:layout_alignBottom="@+id/signup_inviter_input"
+                    android:layout_alignParentEnd="true"
+                    android:text="选填"
+                    android:textColor="@color/color_C5C5C5"
+                    android:textSize="16sp" />
+
+                <ImageView
+                    android:id="@+id/iv_del_inviter"
+                    android:layout_width="34dp"
+                    android:layout_height="34dp"
+                    android:layout_toLeftOf="@id/tv_inviter_input"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:padding="@dimen/dp_5"
+                    android:src="@drawable/icon_login_close"
+                    android:visibility="gone"/>
+
+                <EditText
+                    android:id="@+id/signup_inviter_input"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@id/iv_del_inviter"
+                    android:background="@color/color_00000000"
+                    android:hint="请输入邀请人注册的手机号"
+                    android:textColorHint="@color/color_C5C5C5"
+                    android:textCursorDrawable="@drawable/edittext_cursor_color"
+                    android:inputType="number"
+                    android:maxLength="13"
+                    android:textSize="@dimen/text_size_big" />
+
+            </RelativeLayout>
+
+            <View
+                android:id="@+id/signup_belowInviter"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@id/rl_inviter_input"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:background="@color/color_F6F8F9" />
+
+            <LinearLayout
+                android:id="@+id/signup_belowFivLay"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_below="@id/signup_belowInviter"
+                android:layout_marginTop="40dp"
+                android:layout_marginLeft="25dp"
+                android:gravity="bottom"
+                android:orientation="horizontal">
+
+
+                <com.search.coupon.agent.view.AutoLinkStyleTextView
+                    android:id="@+id/signup_belowFiv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:text="我已经阅读并同意《用户服务协议》"
+                    android:textColor="@color/color_C5C5C5"
+                    app:AutoLinkStyleTextView_text_value="《用户服务协议》"
+                    app:AutoLinkStyleTextView_default_color="@color/color_C5C5C5"
+                    app:AutoLinkStyleTextView_has_under_line="false"
+                    android:textSize="@dimen/sp_14" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/signup_signupButtonLay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/signup_belowFContainerLay"
+            android:layout_marginTop="10dp"
+            android:gravity="center_vertical">
+
+       <!--     <TextView
+                android:id="@+id/signup_signupButton"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:background="@drawable/bg_button_disable"
+                android:gravity="center"
+                android:text="注册"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_big_xx" />-->
+
+            <LinearLayout
+                android:id="@+id/ll_btn"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:gravity="center_horizontal"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:paddingBottom="20dp">
+
+                <TextView
+                    android:id="@+id/signup_signupButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_button_disable"
+                    android:gravity="center"
+                    android:paddingBottom="@dimen/dp_10"
+                    android:paddingTop="@dimen/dp_10"
+                    android:text="注册"
+                    android:textColor="@color/white"
+                    android:textSize="18sp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/signup_go_login"
+                android:layout_width="wrap_content"
+                android:layout_height="25dp"
+                android:layout_below="@id/ll_btn"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="已有帐号,"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="去登录"
+                    android:textColor="@color/color_0F90F9"
+                    android:textSize="14sp" />
+            </LinearLayout>
+        </RelativeLayout>
+
+    </LinearLayout>
+</LinearLayout>

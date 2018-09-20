@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:background="@drawable/dialog_bg">
+
+    <Button
+        android:id="@+id/bt_1"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_50"
+        android:text="去支付"
+        android:textColor="@color/color_3889FF"
+        android:textSize="18sp"
+        android:visibility="gone"
+        android:background="@null"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_0.5"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:background="@color/color_E7E9EA"/>
+
+    <Button
+        android:id="@+id/bt_2"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_50"
+        android:text="置顶"
+        android:textColor="@color/color_3889FF"
+        android:textSize="18sp"
+        android:visibility="gone"
+        android:background="@null"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginLeft="5dp"
+        android:visibility="gone"
+        android:background="@color/color_E7E9EA"/>
+
+    <Button
+        android:id="@+id/bt_3"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_50"
+        android:text="刷新"
+        android:visibility="gone"
+        android:textColor="@color/color_3889FF"
+        android:textSize="18sp"
+        android:background="@null"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_0.5"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:background="@color/color_E7E9EA"/>
+
+    <Button
+        android:id="@+id/bt_4"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_50"
+        android:text="修改"
+        android:textColor="@color/color_999999"
+        android:textSize="18sp"
+        android:background="@null"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginLeft="5dp"
+        android:background="@color/color_E7E9EA"/>
+
+    <Button
+        android:id="@+id/bt_5"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_50"
+        android:text="删除"
+        android:textColor="@color/color_999999"
+        android:textSize="18sp"
+        android:background="@null"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginLeft="5dp"
+        android:background="@color/color_E7E9EA"/>
+
+    <Button
+        android:id="@+id/bt_cancel"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_50"
+        android:text="取消"
+        android:textColor="@color/color_999999"
+        android:textSize="18sp"
+        android:background="@null"/>
+</LinearLayout>

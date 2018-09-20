@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.scwang.smartrefresh.layout.SmartRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/refreshLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:srlEnableAutoLoadmore="true"
+    app:srlEnableOverScrollBounce="false">
+    <!-- android:background="@color/color_4F83FE"-->
+
+    <com.scwang.smartrefresh.layout.header.ClassicsHeader
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/fragmentBill_recyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:overScrollMode="never"/>
+
+
+        <RelativeLayout
+            android:id="@+id/rl_search"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:background="@color/transparent">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="50dp"
+                android:background="@drawable/btn_mid_disable"/>
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginTop="36dp"
+                android:layout_marginLeft="36dp"
+                android:src="@drawable/ic_search"/>
+
+            <RelativeLayout
+                android:id="@+id/rl_msg"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="27dp"
+                android:layout_marginEnd="5dp"
+                android:layout_alignParentEnd="true">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/ic_message"
+                    android:adjustViewBounds="true"
+                    android:layout_centerInParent="true"
+                    android:scaleType="matrix"/>
+
+                <ImageView
+                    android:id="@+id/iv_msg_new"
+                    android:layout_width="6dp"
+                    android:layout_height="6dp"
+                    android:src="@drawable/bg_message"
+                    android:gravity="center"
+                    android:visibility="invisible"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginEnd="2dp"
+                    android:layout_alignParentEnd="true" />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <com.scwang.smartrefresh.layout.footer.ClassicsFooter
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+</com.scwang.smartrefresh.layout.SmartRefreshLayout>

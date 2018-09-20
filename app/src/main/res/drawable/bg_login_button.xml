@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_pressed="false">
+        <shape>
+            <!-- 设置四个角的角度 -->
+            <corners android:radius="70dp" />
+            <!--<gradient android:angle="0" android:endColor="#4DA3FF" android:startColor="#0C9BFF" />-->
+            <gradient android:angle="0" android:endColor="#FF924C" android:startColor="#FDAC57" />
+        </shape>
+    </item>
+    <item android:state_pressed="true">
+        <shape>
+            <!-- 中间的背景色 -->
+            <!--<solid android:color="#588FFD" />-->
+            <solid android:color="#FF924C"/>
+            <corners android:radius="70dp" />
+        </shape>
+    </item>
+</selector>
