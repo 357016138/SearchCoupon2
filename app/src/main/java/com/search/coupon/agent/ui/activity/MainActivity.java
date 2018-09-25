@@ -1,5 +1,7 @@
 package com.search.coupon.agent.ui.activity;
 
+import android.content.ClipData;
+import android.content.ClipDescription;
 import android.content.ClipboardManager;
 import android.content.Context;
 import android.content.Intent;
@@ -340,15 +342,19 @@ public class MainActivity extends BaseActivity {
     @Override
     protected void onResume() {
         super.onResume();
-        //从粘贴板拿数据
-        ClipboardManager clipManager = (ClipboardManager) getSystemService(Context.CLIPBOARD_SERVICE);
-        //判断剪贴板里是否有内容
-        if("".equals(clipManager.getText())) {
+        ClipboardManager clipboardManager = (ClipboardManager) getSystemService(Context.CLIPBOARD_SERVICE);
+        //判断剪切版时候有内容
+        if(!clipboardManager.hasPrimaryClip())
             return;
-        }
-        String content = clipManager.getText().toString();
+        ClipData clipData = clipboardManager.getPrimaryClip();
+        //获取 ClipDescription
+        ClipDescription clipDescription = clipboardManager.getPrimaryClipDescription();
+        //获取 lable
+        String lable = clipDescription.getLabel().toString();
+        //获取 text
+        String content = clipData.getItemAt(0).getText().toString();
         showTipDialog(content);
-        clipManager.setText("");
+        clipboardManager.setText("");
     }
 
 
@@ -364,7 +370,6 @@ public class MainActivity extends BaseActivity {
             public void onLeftClick() {
                 dialog.dismiss();
             }
-
             @Override
             public void onRightClick() {
                 dialog.dismiss();
