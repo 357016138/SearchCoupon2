@@ -9,9 +9,6 @@ import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-import com.base.bj.paysdk.domain.TrPayResult;
-import com.base.bj.paysdk.listener.PayResultListener;
-import com.base.bj.paysdk.utils.TrPay;
 import com.search.coupon.agent.R;
 import com.search.coupon.agent.bean.CoinBean;
 import com.search.coupon.agent.bean.OrderBean;
@@ -271,35 +268,35 @@ public class PayActivity extends BaseActivity {
      * @param userid          商户系统用户ID(如：trpay@52yszd.com，商户系统内唯一)*/
     public void goToPayByAliPay(String tradename,String outtradeno,long amount,String backparams,String notifyurl,String userid){
 
-        TrPay.getInstance(PayActivity.this).callAlipay(tradename, outtradeno, amount, backparams, notifyurl, userid, new PayResultListener() {
-            /**
-             * 支付完成回调
-             * @param context        上下文
-             * @param outtradeno   商户系统订单号
-             * @param resultCode   支付状态(RESULT_CODE_SUCC：支付成功、RESULT_CODE_FAIL：支付失败)
-             * @param resultString  支付结果
-             * @param payType      支付类型（1：支付宝 2：微信 3：银联）
-             * @param amount       支付金额
-             * @param tradename   商品名称
-             */
-            @Override
-            public void onPayFinish(Context context, String outtradeno, int resultCode, String resultString, int payType, Long                                                           amount, String tradename) {
-                if (resultCode == TrPayResult.RESULT_CODE_SUCC.getId()) {
-                    Bundle bd = new Bundle();
-                    bd.putString("orderId",orderId);
-                    if (StringUtils.isEmpty(path)){
-                        goPage(PayResultActivity.class,bd);
-                    }else {
-                        toast("支付宝支付成功");
-                    }
-                    finish();
-                    //支付成功逻辑处理
-                } else if (resultCode == TrPayResult.RESULT_CODE_FAIL.getId()) {
-                    //支付失败逻辑处理
-                    toast("支付宝支付未成功");
-                }
-            }
-        });
+//        TrPay.getInstance(PayActivity.this).callAlipay(tradename, outtradeno, amount, backparams, notifyurl, userid, new PayResultListener() {
+//            /**
+//             * 支付完成回调
+//             * @param context        上下文
+//             * @param outtradeno   商户系统订单号
+//             * @param resultCode   支付状态(RESULT_CODE_SUCC：支付成功、RESULT_CODE_FAIL：支付失败)
+//             * @param resultString  支付结果
+//             * @param payType      支付类型（1：支付宝 2：微信 3：银联）
+//             * @param amount       支付金额
+//             * @param tradename   商品名称
+//             */
+//            @Override
+//            public void onPayFinish(Context context, String outtradeno, int resultCode, String resultString, int payType, Long                                                           amount, String tradename) {
+//                if (resultCode == TrPayResult.RESULT_CODE_SUCC.getId()) {
+//                    Bundle bd = new Bundle();
+//                    bd.putString("orderId",orderId);
+//                    if (StringUtils.isEmpty(path)){
+//                        goPage(PayResultActivity.class,bd);
+//                    }else {
+//                        toast("支付宝支付成功");
+//                    }
+//                    finish();
+//                    //支付成功逻辑处理
+//                } else if (resultCode == TrPayResult.RESULT_CODE_FAIL.getId()) {
+//                    //支付失败逻辑处理
+//                    toast("支付宝支付未成功");
+//                }
+//            }
+//        });
 
 
     }
@@ -315,35 +312,35 @@ public class PayActivity extends BaseActivity {
 
     public void goToPayByWechat(String tradename,String outtradeno,long amount,String backparams,String notifyurl,String userid){
 
-        TrPay.getInstance(PayActivity.this).callWxPay(tradename, outtradeno, amount, backparams, notifyurl, userid, new PayResultListener() {
-            /**
-             * 支付完成回调
-             * @param context        上下文
-             * @param outtradeno   商户系统订单号
-             * @param resultCode   支付状态(RESULT_CODE_SUCC：支付成功、RESULT_CODE_FAIL：支付失败)
-             * @param resultString  支付结果
-             * @param payType      支付类型（1：支付宝 2：微信 3：银联）
-             * @param amount       支付金额
-             * @param tradename   商品名称
-             */
-            @Override
-            public void onPayFinish(Context context, String outtradeno, int resultCode, String resultString, int payType, Long                                                           amount, String tradename) {
-                if (resultCode == TrPayResult.RESULT_CODE_SUCC.getId()) {
-                    //支付成功逻辑处理
-                    Bundle bd = new Bundle();
-                    bd.putString("orderId",orderId);
-                    if (StringUtils.isEmpty(path)){
-                        goPage(PayResultActivity.class,bd);
-                    }else {
-                        toast("微信支付成功");
-                    }
-                    finish();
-                } else if (resultCode == TrPayResult.RESULT_CODE_FAIL.getId()) {
-                    //支付失败逻辑处理
-                    toast("微信支付未成功");
-                }
-            }
-        });
+//        TrPay.getInstance(PayActivity.this).callWxPay(tradename, outtradeno, amount, backparams, notifyurl, userid, new PayResultListener() {
+//            /**
+//             * 支付完成回调
+//             * @param context        上下文
+//             * @param outtradeno   商户系统订单号
+//             * @param resultCode   支付状态(RESULT_CODE_SUCC：支付成功、RESULT_CODE_FAIL：支付失败)
+//             * @param resultString  支付结果
+//             * @param payType      支付类型（1：支付宝 2：微信 3：银联）
+//             * @param amount       支付金额
+//             * @param tradename   商品名称
+//             */
+//            @Override
+//            public void onPayFinish(Context context, String outtradeno, int resultCode, String resultString, int payType, Long                                                           amount, String tradename) {
+//                if (resultCode == TrPayResult.RESULT_CODE_SUCC.getId()) {
+//                    //支付成功逻辑处理
+//                    Bundle bd = new Bundle();
+//                    bd.putString("orderId",orderId);
+//                    if (StringUtils.isEmpty(path)){
+//                        goPage(PayResultActivity.class,bd);
+//                    }else {
+//                        toast("微信支付成功");
+//                    }
+//                    finish();
+//                } else if (resultCode == TrPayResult.RESULT_CODE_FAIL.getId()) {
+//                    //支付失败逻辑处理
+//                    toast("微信支付未成功");
+//                }
+//            }
+//        });
 
     }
 

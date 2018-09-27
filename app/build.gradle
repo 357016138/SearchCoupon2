@@ -83,7 +83,7 @@ dependencies {
     //butterknife注解 √
     annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
     //第三方支付
-    compile(name: 'paysdk-release-1.2.1', ext: 'aar')//paysdk-release-1.2.1(sdk名称)
+//    compile(name: 'paysdk-release-1.2.1', ext: 'aar')//paysdk-release-1.2.1(sdk名称)
     compile 'com.youth.banner:banner:1.4.10'
     //解决TextView会自动换行的bug
     compile 'me.biubiubiu.justifytext:library:1.1'
