@@ -92,9 +92,9 @@ dependencies {
     //注解 √
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
     //淘宝联盟
-    compile(name: 'alibc_trade_biz-3.1.1.210', ext: 'aar')
-    compile(name: 'alibc_trade_common-3.1.1.210', ext: 'aar')
-    compile(name: 'alibc_trade_sdk-3.1.1.210', ext: 'aar')
+//    compile(name: 'alibc_trade_biz-3.1.1.210', ext: 'aar')
+//    compile(name: 'alibc_trade_common-3.1.1.210', ext: 'aar')
+//    compile(name: 'alibc_trade_sdk-3.1.1.210', ext: 'aar')
 
 
 }

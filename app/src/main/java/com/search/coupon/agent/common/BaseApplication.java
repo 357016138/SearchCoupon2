@@ -3,6 +3,8 @@ package com.search.coupon.agent.common;
 import android.app.Activity;
 import android.app.Application;
 import android.os.Bundle;
+import android.util.Log;
+import android.widget.Toast;
 
 import com.umeng.commonsdk.UMConfigure;
 import com.umeng.socialize.PlatformConfig;
@@ -41,6 +43,8 @@ public class BaseApplication extends Application {
 
         registerActivityLifecycleCallbacks(new MyActivityLifecycleCallbacks());
         UncatchExceptionHandler.getInstance().init(this);
+
+
     }
 
     public static BaseApplication getApplication() {

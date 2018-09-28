@@ -16,17 +16,18 @@ import com.search.coupon.agent.R;
 import com.search.coupon.agent.adapter.SearchAdapter;
 import com.search.coupon.agent.bean.SearchBean;
 import com.search.coupon.agent.common.BaseActivity;
-import com.search.coupon.agent.common.ShareData;
 import com.search.coupon.agent.listener.OperateListener;
-import com.search.coupon.agent.network.RequestParams;
 import com.search.coupon.agent.network.ResultData;
 import com.search.coupon.agent.network.Task;
-import com.search.coupon.agent.network.UrlConfig;
-import com.search.coupon.agent.utils.DeviceUtils;
+import com.search.coupon.agent.utils.LogUtils;
 import com.search.coupon.agent.utils.StringUtils;
 import com.scwang.smartrefresh.layout.SmartRefreshLayout;
 import com.scwang.smartrefresh.layout.api.RefreshLayout;
 import com.scwang.smartrefresh.layout.listener.OnLoadmoreListener;
+import com.taobao.api.DefaultTaobaoClient;
+import com.taobao.api.TaobaoClient;
+import com.taobao.api.request.TbkItemInfoGetRequest;
+import com.taobao.api.response.TbkItemInfoGetResponse;
 
 import java.util.List;
 
@@ -153,14 +154,27 @@ public class SearchActivity extends BaseActivity implements TextView.OnEditorAct
      * 搜索信息列表
      * */
     private void getSearchList(String mKeyWord) {
-        RequestParams params = new RequestParams(UrlConfig.URL_GET_SEARCH_LIST);
-        params.add("pid", DeviceUtils.getDeviceUniqueId(this));
-        params.add("searchUserId", ShareData.getShareStringData(ShareData.USER_ID));
-        params.add("keyword", mKeyWord);
-        params.add("pageSize", pageSize);
-        params.add("pageNum", pageNum);
-        params.add("sort", "1");
-        startRequest(Task.GET_SEARCH_LIST, params, SearchBean.class);
+
+
+            new Thread(){
+                @Override
+                public void run() {
+                    try {
+                        String url="http://gw.api.taobao.com/router/rest";
+                        String appkey="25075370";
+                        String secret="5eee48fd90c0c89ef4534a85f9690073";
+                        TaobaoClient client = new DefaultTaobaoClient(url, appkey, secret);
+
+                        TbkItemInfoGetRequest req = new TbkItemInfoGetRequest();
+                        req.setNumIids("549273107573");
+                        req.setPlatform(2L);
+                        LogUtils.e(client.execute(req).getBody());
+                    }catch (Exception e){
+                        LogUtils.e(e.toString());
+                    }
+                }
+            }.start();
+
     }
 
 

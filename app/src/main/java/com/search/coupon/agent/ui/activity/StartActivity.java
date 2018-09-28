@@ -11,7 +11,6 @@ import android.support.annotation.RequiresApi;
 import android.text.TextUtils;
 import android.view.View;
 
-import com.base.bj.paysdk.utils.TrPay;
 import com.search.coupon.agent.R;
 import com.search.coupon.agent.bean.VersionBean;
 import com.search.coupon.agent.common.BaseActivity;
@@ -102,7 +101,7 @@ public class StartActivity extends BaseActivity {
 
          */
 
-        TrPay.getInstance(StartActivity.this).initPaySdk("48b8f3bf366148a9aa0ba89e2b5d3ec1","baidu");
+//        TrPay.getInstance(StartActivity.this).initPaySdk("48b8f3bf366148a9aa0ba89e2b5d3ec1","baidu");
     }
 
     @Override
