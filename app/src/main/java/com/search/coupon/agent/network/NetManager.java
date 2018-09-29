@@ -64,7 +64,6 @@ public class NetManager {
         if (params == null) {
             return null;
         }
-        addUA(context, params.getParams());
         LogUtils.e("请求链接是：" + StringUtils.getQueryUrl(params.getUrl(), params == null ? null : params.getParams()));
         Request.Builder requestBuilder = new Request.Builder();
         requestBuilder.url(StringUtils.getQueryUrl(params.getUrl(), params.getParams()));
@@ -93,7 +92,6 @@ public class NetManager {
         if (params == null) {
             return null;
         }
-        addUA(context, params.getParams());
         LogUtils.e("请求链接是：" + StringUtils.getQueryUrl(params.getUrl(), params == null ? null : params.getParams()));
         Request.Builder requestBuilder = new Request.Builder().url(params.getUrl());
         FormBody.Builder bodyBuilder = new FormBody.Builder();
@@ -215,30 +213,6 @@ public class NetManager {
         return TextUtils.isEmpty(requestJson) ? "" : requestJson;
     }
 
-    private static void addUA(Context context, Map map) {
-//        if (map == null) {
-//            return;
-//        }
-//        if (UA == null) {
-//            UA = new HashMap<>();
-//        }
-//        UA.clear();
-//        UA.put("from", "android");
-//        UA.put("imei", DeviceUtils.getPhoneUID(context));
-//        UA.put("version", DeviceUtils.getCurrentAppVersionCode(context) + "");
-//        UA.put("timestamp", System.currentTimeMillis() + "");
-//        String channel=DeviceUtils.getChannel(context);
-//        if("SPI".equals(channel)){
-//            UA.put("channel", "");
-//        }else {
-//            UA.put("channel", DeviceUtils.getChannel(context));
-//        }
-
-//        if(!StringUtils.isEmpty(UserUtils.getSessionId())){
-//            UA.put("token", UserUtils.getSessionId());
-//        }
-//        map.putAll(UA);
-    }
 
     public void setConnectTime(int connectTime) {
         client = getNewBuilder().retryOnConnectionFailure(false).connectTimeout(connectTime, TimeUnit.SECONDS)

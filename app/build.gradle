@@ -96,5 +96,4 @@ dependencies {
 //    compile(name: 'alibc_trade_common-3.1.1.210', ext: 'aar')
 //    compile(name: 'alibc_trade_sdk-3.1.1.210', ext: 'aar')
 
-
 }

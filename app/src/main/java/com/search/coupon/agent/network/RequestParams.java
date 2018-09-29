@@ -3,8 +3,10 @@ package com.search.coupon.agent.network;
 import android.text.TextUtils;
 
 
+import com.search.coupon.agent.common.Constants;
 import com.search.coupon.agent.common.ShareData;
 import com.search.coupon.agent.utils.ConfigUtils;
+import com.search.coupon.agent.utils.TaoBaoKeUtil;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -14,7 +16,7 @@ import java.util.TreeMap;
  * Created by ____ Bye丶 on 2017/3/23.
  */
 public class RequestParams {
-    private Map<String, Object> params;
+    public Map<String, Object> params;
     private Map<String, String> headers;
     //是否加密
     private boolean isEncrypt = ConfigUtils.getIsEncrypt();
@@ -29,9 +31,9 @@ public class RequestParams {
 
     public RequestParams(String url) {
         this.url = url;
-        httpType = HttpType.POST;
+        httpType = HttpType.GET;
         params = new TreeMap<>();
-        addHeader("Cookie", ShareData.getShareStringData(ShareData.USER_COOKIE));
+//        addHeader("Cookie", ShareData.getShareStringData(ShareData.USER_COOKIE));
 
     }
 

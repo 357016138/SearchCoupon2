@@ -34,10 +34,6 @@ public class BaseHandler implements Callback {
         manager = new NetManager();
     }
 
-//    public Call start(int tag, RequestParams params, ResponseListener listener) {
-//        return start(tag, params, listener, true);
-//    }
-
     public Call start(int tag, RequestParams params, ResponseListener listener, boolean isDialog) {
         if (params == null) {
             return null;

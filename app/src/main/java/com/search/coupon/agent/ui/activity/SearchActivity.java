@@ -16,14 +16,21 @@ import com.search.coupon.agent.R;
 import com.search.coupon.agent.adapter.SearchAdapter;
 import com.search.coupon.agent.bean.SearchBean;
 import com.search.coupon.agent.common.BaseActivity;
+import com.search.coupon.agent.common.Constants;
+import com.search.coupon.agent.common.ShareData;
 import com.search.coupon.agent.listener.OperateListener;
+import com.search.coupon.agent.network.RequestParams;
 import com.search.coupon.agent.network.ResultData;
 import com.search.coupon.agent.network.Task;
+import com.search.coupon.agent.network.UrlConfig;
+import com.search.coupon.agent.utils.DeviceUtils;
 import com.search.coupon.agent.utils.LogUtils;
 import com.search.coupon.agent.utils.StringUtils;
 import com.scwang.smartrefresh.layout.SmartRefreshLayout;
 import com.scwang.smartrefresh.layout.api.RefreshLayout;
 import com.scwang.smartrefresh.layout.listener.OnLoadmoreListener;
+import com.search.coupon.agent.utils.TaoBaoConstants;
+import com.search.coupon.agent.utils.TaoBaoKeUtil;
 import com.taobao.api.DefaultTaobaoClient;
 import com.taobao.api.TaobaoClient;
 import com.taobao.api.request.TbkItemInfoGetRequest;
@@ -155,25 +162,14 @@ public class SearchActivity extends BaseActivity implements TextView.OnEditorAct
      * */
     private void getSearchList(String mKeyWord) {
 
+        RequestParams requestParams = new RequestParams(Constants.TBK_ITEM_INFO);
+        requestParams.params.putAll(TaoBaoKeUtil.getCommonParams(Constants.TBK_ITEM_INFO_METHOD));
+        requestParams.add("num_iids","576461962321");
+        requestParams.add("platform", TaoBaoConstants.PLATFORM);
+        String sign = TaoBaoKeUtil.signTopRequest(requestParams.params, TaoBaoConstants.SECRET);
+        requestParams.params.put("sign",sign);
 
-            new Thread(){
-                @Override
-                public void run() {
-                    try {
-                        String url="http://gw.api.taobao.com/router/rest";
-                        String appkey="25075370";
-                        String secret="5eee48fd90c0c89ef4534a85f9690073";
-                        TaobaoClient client = new DefaultTaobaoClient(url, appkey, secret);
-
-                        TbkItemInfoGetRequest req = new TbkItemInfoGetRequest();
-                        req.setNumIids("549273107573");
-                        req.setPlatform(2L);
-                        LogUtils.e(client.execute(req).getBody());
-                    }catch (Exception e){
-                        LogUtils.e(e.toString());
-                    }
-                }
-            }.start();
+        startRequest(Task.GET_SEARCH_LIST, requestParams, null);
 
     }
 
@@ -187,25 +183,26 @@ public class SearchActivity extends BaseActivity implements TextView.OnEditorAct
                 fragmentBill_refreshLayout.finishLoadmore();
                 no_data_refreshLayout.finishRefresh();
                 if (handlerRequestErr(data)) {
-                    SearchBean searchBean = (SearchBean) data.getBody();
-                    //------------------数据异常情况-------------------
-                    if (searchBean == null || searchBean.getGroups() == null || searchBean.getGroups().size() <= 0) {
-                        if (pageNum == 1) {
-                            showNodata();
-                        }
-                        return;
-                    }
-                    //-----------------数据正常情况--------------------
-                    List<SearchBean.ProductBean> dataListProm = searchBean.getGroups();
-                    if (pageNum == 1) {
-                        showList();
-                        adapter.setData(dataListProm);
-                    } else {
-                        adapter.getData().addAll(dataListProm);
-                    }
-                    //如果返回数据不够10条，就不能继续上拉加载更多
-                    fragmentBill_refreshLayout.setEnableLoadmore(dataListProm.size() >= pageSize);
-                    adapter.notifyDataSetChanged();
+
+//                    SearchBean searchBean = (SearchBean) data.getBody();
+//                    //------------------数据异常情况-------------------
+//                    if (searchBean == null || searchBean.getGroups() == null || searchBean.getGroups().size() <= 0) {
+//                        if (pageNum == 1) {
+//                            showNodata();
+//                        }
+//                        return;
+//                    }
+//                    //-----------------数据正常情况--------------------
+//                    List<SearchBean.ProductBean> dataListProm = searchBean.getGroups();
+//                    if (pageNum == 1) {
+//                        showList();
+//                        adapter.setData(dataListProm);
+//                    } else {
+//                        adapter.getData().addAll(dataListProm);
+//                    }
+//                    //如果返回数据不够10条，就不能继续上拉加载更多
+//                    fragmentBill_refreshLayout.setEnableLoadmore(dataListProm.size() >= pageSize);
+//                    adapter.notifyDataSetChanged();
 
                 } else {
                     if (pageNum == 1) {

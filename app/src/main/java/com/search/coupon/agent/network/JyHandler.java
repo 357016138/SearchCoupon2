@@ -81,7 +81,6 @@ public class JyHandler extends BaseHandler implements Callback {
         ResultData data = new ResultData();
         try {
             String resultStr = response.body().string();
-//          String realResult= AESCrypt.getInstance().decrypt(resultStr);
 
             String headerStr = response.header("Set-Cookie");
 
@@ -93,7 +92,6 @@ public class JyHandler extends BaseHandler implements Callback {
             }
             LogUtils.e("返回数据::" + "HTTP_CODE:" + response.code() + "\n" + "返回json:" + resultStr);
             JSONObject json = new JSONObject(resultStr);
-            //JSONObject header = json.optJSONObject("header");
 
             //返回状态 默认"0"为成功
             //String rspCode = header.optString("retCode");

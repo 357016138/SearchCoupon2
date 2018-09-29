@@ -17,16 +17,9 @@ public class Constants {
     public static final int FLAG_OPEN_BIND_BANK_CARD = 4001;
     //忘记密码的请求码
     public static final int FLAG_FORGET_PASSWORD = 4002;
-
     public static final int MENU_CAMERA = 1001;//相机
     public static final int MENU_ALBUM = 1002;//相册
-    public static final int MENU_CANCEL = 1003;//取消
-    public static final int REQUEST_PREVIEW = 1007;
-    public static final int REQUEST_IMAGE = 1008;
-    public static final int REQUEST_SUBMIT = 1009;
-
     public static final int FINISTH = 3001;
-    public static final int GO_WITHDRAW_DEPOSIT = 3002;
     public static final int GET_NEW_MSG = 3003;
     //刷新询价订单列表
     public static final int GET_REFRESH_ORDER_LIST = 3004;
@@ -56,4 +49,16 @@ public class Constants {
         }
         return "其它";
     }
+    // APP_KEY
+    public final static String APP_KEY = "25075370";
+    // SECRET
+    public final static String SECRET = "5eee48fd90c0c89ef4534a85f9690073";
+    // 平台
+    public final static String PLATFORM = "2";
+    //淘宝客商品详情URL（简版）
+    public final static String TBK_ITEM_INFO = "http://gw.api.taobao.com/router/rest";
+
+    //淘宝客商品详情（简版）
+    public final static String TBK_ITEM_INFO_METHOD = "taobao.tbk.item.info.get";
+
 }
