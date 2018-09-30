@@ -23,6 +23,7 @@ import com.search.coupon.agent.ui.fragment.HomeFragment;
 import com.search.coupon.agent.ui.fragment.MineFragment;
 import com.search.coupon.agent.ui.fragment.PublishFragment;
 import com.search.coupon.agent.utils.LogUtils;
+import com.search.coupon.agent.utils.StringUtils;
 import com.search.coupon.agent.view.DownloadDialog;
 import com.search.coupon.agent.view.OneButtonDialog;
 
@@ -347,12 +348,9 @@ public class MainActivity extends BaseActivity {
         if(!clipboardManager.hasPrimaryClip())
             return;
         ClipData clipData = clipboardManager.getPrimaryClip();
-        //获取 ClipDescription
-        ClipDescription clipDescription = clipboardManager.getPrimaryClipDescription();
-        //获取 lable
-        String lable = clipDescription.getLabel().toString();
         //获取 text
         String content = clipData.getItemAt(0).getText().toString();
+        if (StringUtils.isEmpty(content)) return;
         showTipDialog(content);
         clipboardManager.setText("");
     }
@@ -373,7 +371,9 @@ public class MainActivity extends BaseActivity {
             @Override
             public void onRightClick() {
                 dialog.dismiss();
-                goPage(SearchActivity.class);
+                Bundle bd = new Bundle();
+                bd.putString("content",content);
+                goPage(SearchActivity.class,bd);
             }
         });
         dialog.show();

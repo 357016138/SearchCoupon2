@@ -31,11 +31,15 @@ import com.scwang.smartrefresh.layout.api.RefreshLayout;
 import com.scwang.smartrefresh.layout.listener.OnLoadmoreListener;
 import com.search.coupon.agent.utils.TaoBaoConstants;
 import com.search.coupon.agent.utils.TaoBaoKeUtil;
+import com.taobao.api.ApiException;
 import com.taobao.api.DefaultTaobaoClient;
 import com.taobao.api.TaobaoClient;
 import com.taobao.api.request.TbkItemInfoGetRequest;
 import com.taobao.api.response.TbkItemInfoGetResponse;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.HashMap;
 import java.util.List;
 
 import butterknife.BindView;
@@ -114,6 +118,7 @@ public class SearchActivity extends BaseActivity implements TextView.OnEditorAct
         //弹出软键盘
 //        DeviceUtils.showSoftInputFromWindow(this,et_search);
 
+        if (StringUtils.isEmpty(content)) return;
         getSearchList(content);
     }
 
@@ -162,14 +167,23 @@ public class SearchActivity extends BaseActivity implements TextView.OnEditorAct
      * */
     private void getSearchList(String mKeyWord) {
 
-        RequestParams requestParams = new RequestParams(Constants.TBK_ITEM_INFO);
-        requestParams.params.putAll(TaoBaoKeUtil.getCommonParams(Constants.TBK_ITEM_INFO_METHOD));
-        requestParams.add("num_iids","576461962321");
-        requestParams.add("platform", TaoBaoConstants.PLATFORM);
-        String sign = TaoBaoKeUtil.signTopRequest(requestParams.params, TaoBaoConstants.SECRET);
-        requestParams.params.put("sign",sign);
+        //淘宝客商品详情（简版）
+//        RequestParams params = new RequestParams(TaoBaoConstants.TBK_HTTPS_URL);
+//        params.params.putAll(TaoBaoKeUtil.getCommonParams(TaoBaoConstants.TBK_ITEM_INFO));     // 加入公共参数
+//        params.add("num_iids","576461962321");
+//        params.add("platform", TaoBaoConstants.PLATFORM);
+//        params.add("sign",TaoBaoKeUtil.signTopRequest(params.params, TaoBaoConstants.SECRET));     // 加密签名
+//        startRequest(Task.GET_SEARCH_LIST, params, null);
 
-        startRequest(Task.GET_SEARCH_LIST, requestParams, null);
+
+        // 通用物料搜索API（导购）
+        RequestParams params = new RequestParams(TaoBaoConstants.TBK_HTTPS_URL);
+        params.params.putAll(TaoBaoKeUtil.getCommonParams(TaoBaoConstants.TBK_MATERIAL_OPTIONAL));     // 加入公共参数
+        params.add("q",mKeyWord);
+        params.add("adzone_id", TaoBaoConstants.ADZONE_ID);
+        params.add("sign",TaoBaoKeUtil.signTopRequest(params.params, TaoBaoConstants.SECRET));     // 加密签名
+        startRequest(Task.GET_SEARCH_LIST, params, null);
+
 
     }
 
