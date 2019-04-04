@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">微信搜索</string>
+    <string name="app_name">淘券券</string>
     <string name="text_net_error">网络出错，请检查网络设置</string>
 
     <string name="title_home">首页</string>
@@ -84,5 +84,10 @@
     <string name="title_activity_crop_pic">CropPicActivity</string>
     <!--充值界面end-->
 
+    <string name="taobao_app_shop">taobao://shop.m.taobao.com/shop/shop_index.htm?shop_id=%1$s</string>
+    <string name="taobao_app_goods">taobao://item.taobao.com/item.htm?id=%1$s</string>
+    <string name="taobao_web_shop">https://shop.m.taobao.com/shop/shop_index.htm?shop_id=%1$s</string>
+    <string name="taobao_web_goods">https://item.taobao.com/item.htm?id=%1$s</string>
+    <string name="taobao_package_name">com.taobao.taobao</string>
 
 </resources>

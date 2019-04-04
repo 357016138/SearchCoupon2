@@ -281,10 +281,10 @@ public class HomeFragment extends BaseFragment implements OperateListener{
         @Override
         public void displayImage(Context context, Object path, ImageView imageView) {
             String imgUrl = ((BannerBean) path).getImageUrl();
-            if(StringUtils.isEmpty(imgUrl))
-                Glide.with(context).load(R.drawable.icon_banner_default).into(imageView);
-            else
-                Glide.with(context).load(imgUrl).into(imageView);
+//            if(StringUtils.isEmpty(imgUrl))
+//                Glide.with(context).load(R.drawable.icon_banner_default).into(imageView);
+//            else
+//                Glide.with(context).load(imgUrl).into(imageView);
             imageView.setScaleType(ImageView.ScaleType.FIT_XY);
         }
     }

@@ -194,8 +194,7 @@ public class SettingActivity extends BaseActivity implements CompoundButton.OnCh
                 if (handlerRequestErr(data)) {
                     UserUtils.loginOut();
                     Bundle bd = new Bundle();
-                    bd.putInt(MainActivity.CURRENT_POSITION, 0);
-                    bd.putBoolean(MainActivity.IS_CLEAR_FRAGMENT, true);
+
                     goPage(MainActivity.class, bd);
                 }
                 break;

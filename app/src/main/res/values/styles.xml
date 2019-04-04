@@ -12,10 +12,6 @@
         <!--<item name="android:windowBackground">@android:color/transparent</item>-->
         <!--<item name="colorAccent">@android:color/holo_blue_dark</item>-->
         <!--</style>-->
-
-        <item name="colorPrimary">@color/color_0c9bff</item>
-        <item name="colorPrimaryDark">@color/color_0c9bff</item>
-        <item name="colorAccent">@color/color_0c9bff</item>
         <item name="android:windowAnimationStyle">@style/activityAnimation</item>
     </style>
 

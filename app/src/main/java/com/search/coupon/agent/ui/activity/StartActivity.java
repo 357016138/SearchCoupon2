@@ -26,8 +26,14 @@ import com.search.coupon.agent.utils.UserUtils;
 import com.search.coupon.agent.view.DownloadDialog;
 
 import java.lang.ref.WeakReference;
+import java.util.Timer;
+import java.util.TimerTask;
+import java.util.concurrent.TimeUnit;
 
 import butterknife.ButterKnife;
+import io.reactivex.Observable;
+import io.reactivex.android.schedulers.AndroidSchedulers;
+import io.reactivex.functions.Consumer;
 import okhttp3.Call;
 
 /**
@@ -103,16 +109,31 @@ public class StartActivity extends BaseActivity {
 
 //        TrPay.getInstance(StartActivity.this).initPaySdk("48b8f3bf366148a9aa0ba89e2b5d3ec1","baidu");
     }
-
+    int restSec = 3;
     @Override
     public void dealLogicAfterInitView() {
 
-        if (UserUtils.isLogin()){
-            //检测token是否过期
-            checkTokenValidity();
-        }else{
-            getNewVersion();   //查看是否有新版本
-        }
+        Observable.interval(1, TimeUnit.SECONDS)
+                .observeOn(AndroidSchedulers.mainThread())
+                .doOnNext(new Consumer<Long>() {
+                    @Override
+                    public void accept(Long aLong) throws Exception {
+                        //重新计算时间
+                        restSec --;
+                        if (restSec == 0) {
+                            goPage(MainActivity.class);
+                        }
+
+                    }
+                })
+                .subscribe();
+
+//        if (UserUtils.isLogin()){
+//            //检测token是否过期
+//            checkTokenValidity();
+//        }else{
+//            getNewVersion();   //查看是否有新版本
+//        }
     }
 
 

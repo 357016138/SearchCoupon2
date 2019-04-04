@@ -49,7 +49,7 @@
         android:layout_height="180dp"
         android:gravity="center"
         android:orientation="vertical"
-        android:background="@drawable/bg_with_deposit_header"
+
         android:paddingBottom="30dp"
         android:paddingTop="24dp">
         <RelativeLayout

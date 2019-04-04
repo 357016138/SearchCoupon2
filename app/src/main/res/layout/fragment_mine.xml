@@ -27,7 +27,7 @@
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@drawable/icon_mine_top">
+                >
 
                 <ImageView
                     android:id="@+id/iv_setting"

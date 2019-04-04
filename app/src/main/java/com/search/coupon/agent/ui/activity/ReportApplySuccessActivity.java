@@ -63,8 +63,6 @@ public class ReportApplySuccessActivity extends BaseActivity {
         switch (view.getId()) {
             case R.id.btn_return:
                 Bundle bd = new Bundle();
-                bd.putInt(MainActivity.CURRENT_POSITION, 0);
-                bd.putBoolean(MainActivity.IS_CLEAR_FRAGMENT, true);
                 goPage(MainActivity.class, bd);
                 break;
             case R.id.btn_detail:
@@ -81,8 +79,7 @@ public class ReportApplySuccessActivity extends BaseActivity {
     @Override
     public void OnTopLeftClick() {
         Bundle bd = new Bundle();
-        bd.putInt(MainActivity.CURRENT_POSITION, 1);
-        bd.putBoolean(MainActivity.IS_CLEAR_FRAGMENT, true);
+
         goPage(MainActivity.class, bd);
     }
 

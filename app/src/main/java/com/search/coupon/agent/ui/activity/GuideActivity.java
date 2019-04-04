@@ -25,9 +25,7 @@ public class GuideActivity extends BaseActivity {
     @BindView(R.id.iv_indicator)
     ImageView iv_indicator;
     private int mGuidePage[] = {
-            R.drawable.guide_page0,
-            R.drawable.guide_page1,
-            R.drawable.guide_page2,
+
     };
     private int mIndicator[] = {
             R.drawable.icon_indicator1,

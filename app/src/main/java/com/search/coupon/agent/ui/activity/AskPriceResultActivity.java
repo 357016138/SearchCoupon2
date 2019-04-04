@@ -62,8 +62,7 @@ public class AskPriceResultActivity extends BaseActivity {
         Bundle bd = new Bundle();
         switch (view.getId()) {
             case R.id.btn_return:
-                bd.putInt(MainActivity.CURRENT_POSITION, 0);
-                bd.putBoolean(MainActivity.IS_CLEAR_FRAGMENT, true);
+
                 goPage(MainActivity.class, bd);
                 this.finish();
                 break;
@@ -85,8 +84,7 @@ public class AskPriceResultActivity extends BaseActivity {
     @Override
     public void OnTopLeftClick() {
         Bundle bd = new Bundle();
-        bd.putInt(MainActivity.CURRENT_POSITION, 1);
-        bd.putBoolean(MainActivity.IS_CLEAR_FRAGMENT, true);
+
         goPage(MainActivity.class, bd);
         this.finish();
     }
